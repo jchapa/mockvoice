@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>mockvoice :: because your time is so fucking valuable</title>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="/css/main.css" rel="stylesheet" type="text/css"
+</head>
+<body>
+<div class="container">
+    <h1>MockVoice - Your Time Matters, Even The Time That Doesn't</h1>
+    <div ng-controller="MockCtrl" class="ctrlMock">
+        <ul>
+            <li>Summary</li>
+            <li>Hours</li>
+            <li>Price</li>
+        </ul>
+        <fieldset ng-repeat="lineItem in lineItems">
+         <ul>
+             <li>
+                <input type="text" name="Summary" ng-model="lineItem.strSummary" />
+             </li>
+             <li>
+                <input type="text" name="hours" ng-model="lineItem.dHours" ng-change="calcTotal()" />
+             </li>
+             <li>
+                <input type="text" name="price" ng-model="lineItem.dPrice" ng-change="calcTotal()" />
+             </li>
+         </ul>
+        </fieldset>
+        <div class="itemAdd"><a ng-click="addLineItem()">+ Add Item</a></div>
+        <div><strong>Total: </strong>{{total}}</div>
+    </div>
+</div>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap.js"></script>
+<script type="text/javascript" src="//codeorigin.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="///netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap.js"></script>
+<script type="text/javascript" src="/js/controller/MockCtrl.js"></script>
+<script type="text/javascript" src="/js/app/app.js"></script>
+</body>
+</html>

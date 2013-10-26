@@ -1,0 +1,49 @@
+.container {
+    margin-top:40px;
+}
+
+.ctrlMock ul
+{
+    list-style-type: none;
+    width:80%;
+    float:left;
+    clear:both;
+    display:block;
+    margin:8px;
+    margin-right:20%
+}
+
+.ctrlMock ul li
+{
+    float:left;
+    list-style-type: none;
+
+}
+
+
+.ctrlMock li:nth-child(1)
+{
+    width:60%;
+}
+
+.ctrlMock li:nth-child(2)
+{
+  width:20%;
+}
+
+.ctrlMock li:nth-last-child
+{
+  width:20%;
+}
+
+input
+{
+    width:90%;
+    float:left;
+}
+
+.itemAdd
+{
+    float:right;
+    cursor: pointer;
+}
